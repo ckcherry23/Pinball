@@ -11,6 +11,10 @@
 		C77893FF29414C89000FD862 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77893FE29414C89000FD862 /* ContentView.swift */; };
 		C778940129414C8E000FD862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C778940029414C8E000FD862 /* Assets.xcassets */; };
 		C778940429414C8E000FD862 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C778940329414C8E000FD862 /* Preview Assets.xcassets */; };
+		C778940B29422877000FD862 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778940A29422877000FD862 /* World.swift */; };
+		C778940E29425A1C000FD862 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778940D29425A1C000FD862 /* Body.swift */; };
+		C77894102944B633000FD862 /* CGVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778940F2944B633000FD862 /* CGVector.swift */; };
+		C77894132945BD06000FD862 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77894122945BD06000FD862 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		C77893FE29414C89000FD862 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C778940029414C8E000FD862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C778940329414C8E000FD862 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C778940A29422877000FD862 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		C778940D29425A1C000FD862 /* Body.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body.swift; sourceTree = "<group>"; };
+		C778940F2944B633000FD862 /* CGVector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGVector.swift; sourceTree = "<group>"; };
+		C77894122945BD06000FD862 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +62,9 @@
 				C77893FC29414C89000FD862 /* PinballApp.swift */,
 				C77893FE29414C89000FD862 /* ContentView.swift */,
 				C778940029414C8E000FD862 /* Assets.xcassets */,
+				C77894142945BD0F000FD862 /* GameEngine */,
 				C778940229414C8E000FD862 /* Preview Content */,
+				C778940C29422885000FD862 /* PhysicsEngine */,
 			);
 			path = Pinball;
 			sourceTree = "<group>";
@@ -65,6 +75,32 @@
 				C778940329414C8E000FD862 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C778940C29422885000FD862 /* PhysicsEngine */ = {
+			isa = PBXGroup;
+			children = (
+				C778940A29422877000FD862 /* World.swift */,
+				C778940D29425A1C000FD862 /* Body.swift */,
+				C77894112944B63C000FD862 /* Utils */,
+			);
+			path = PhysicsEngine;
+			sourceTree = "<group>";
+		};
+		C77894112944B63C000FD862 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C778940F2944B633000FD862 /* CGVector.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C77894142945BD0F000FD862 /* GameEngine */ = {
+			isa = PBXGroup;
+			children = (
+				C77894122945BD06000FD862 /* Game.swift */,
+			);
+			path = GameEngine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +174,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C77893FF29414C89000FD862 /* ContentView.swift in Sources */,
+				C77894132945BD06000FD862 /* Game.swift in Sources */,
 				C77893FD29414C89000FD862 /* PinballApp.swift in Sources */,
+				C77894102944B633000FD862 /* CGVector.swift in Sources */,
+				C778940B29422877000FD862 /* World.swift in Sources */,
+				C778940E29425A1C000FD862 /* Body.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
