@@ -8,25 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		C77893FD29414C89000FD862 /* PinballApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77893FC29414C89000FD862 /* PinballApp.swift */; };
-		C77893FF29414C89000FD862 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77893FE29414C89000FD862 /* ContentView.swift */; };
+		C77893FF29414C89000FD862 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77893FE29414C89000FD862 /* GameView.swift */; };
 		C778940129414C8E000FD862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C778940029414C8E000FD862 /* Assets.xcassets */; };
 		C778940429414C8E000FD862 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C778940329414C8E000FD862 /* Preview Assets.xcassets */; };
 		C778940B29422877000FD862 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778940A29422877000FD862 /* World.swift */; };
 		C778940E29425A1C000FD862 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778940D29425A1C000FD862 /* Body.swift */; };
 		C77894102944B633000FD862 /* CGVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778940F2944B633000FD862 /* CGVector.swift */; };
 		C77894132945BD06000FD862 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77894122945BD06000FD862 /* Game.swift */; };
+		C77894172945CAE1000FD862 /* CollisionPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77894162945CAE1000FD862 /* CollisionPoints.swift */; };
+		C77894192945CF64000FD862 /* Collider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77894182945CF64000FD862 /* Collider.swift */; };
+		C778941B2945CF85000FD862 /* BallCollider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778941A2945CF85000FD862 /* BallCollider.swift */; };
+		C778941D2945D019000FD862 /* PlaneCollider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778941C2945D019000FD862 /* PlaneCollider.swift */; };
+		C778941F2945D8B7000FD862 /* Collision.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778941E2945D8B7000FD862 /* Collision.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C77893F929414C89000FD862 /* Pinball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77893FC29414C89000FD862 /* PinballApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinballApp.swift; sourceTree = "<group>"; };
-		C77893FE29414C89000FD862 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C77893FE29414C89000FD862 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		C778940029414C8E000FD862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C778940329414C8E000FD862 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C778940A29422877000FD862 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		C778940D29425A1C000FD862 /* Body.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body.swift; sourceTree = "<group>"; };
 		C778940F2944B633000FD862 /* CGVector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGVector.swift; sourceTree = "<group>"; };
 		C77894122945BD06000FD862 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		C77894162945CAE1000FD862 /* CollisionPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionPoints.swift; sourceTree = "<group>"; };
+		C77894182945CF64000FD862 /* Collider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collider.swift; sourceTree = "<group>"; };
+		C778941A2945CF85000FD862 /* BallCollider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallCollider.swift; sourceTree = "<group>"; };
+		C778941C2945D019000FD862 /* PlaneCollider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneCollider.swift; sourceTree = "<group>"; };
+		C778941E2945D8B7000FD862 /* Collision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collision.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				C77893FC29414C89000FD862 /* PinballApp.swift */,
-				C77893FE29414C89000FD862 /* ContentView.swift */,
 				C778940029414C8E000FD862 /* Assets.xcassets */,
+				C77894152945BE4A000FD862 /* Views */,
 				C77894142945BD0F000FD862 /* GameEngine */,
 				C778940229414C8E000FD862 /* Preview Content */,
 				C778940C29422885000FD862 /* PhysicsEngine */,
@@ -82,6 +92,11 @@
 			children = (
 				C778940A29422877000FD862 /* World.swift */,
 				C778940D29425A1C000FD862 /* Body.swift */,
+				C778941E2945D8B7000FD862 /* Collision.swift */,
+				C77894162945CAE1000FD862 /* CollisionPoints.swift */,
+				C77894182945CF64000FD862 /* Collider.swift */,
+				C778941A2945CF85000FD862 /* BallCollider.swift */,
+				C778941C2945D019000FD862 /* PlaneCollider.swift */,
 				C77894112944B63C000FD862 /* Utils */,
 			);
 			path = PhysicsEngine;
@@ -101,6 +116,14 @@
 				C77894122945BD06000FD862 /* Game.swift */,
 			);
 			path = GameEngine;
+			sourceTree = "<group>";
+		};
+		C77894152945BE4A000FD862 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C77893FE29414C89000FD862 /* GameView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,12 +196,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C77893FF29414C89000FD862 /* ContentView.swift in Sources */,
+				C778941B2945CF85000FD862 /* BallCollider.swift in Sources */,
+				C77893FF29414C89000FD862 /* GameView.swift in Sources */,
 				C77894132945BD06000FD862 /* Game.swift in Sources */,
 				C77893FD29414C89000FD862 /* PinballApp.swift in Sources */,
+				C77894172945CAE1000FD862 /* CollisionPoints.swift in Sources */,
 				C77894102944B633000FD862 /* CGVector.swift in Sources */,
 				C778940B29422877000FD862 /* World.swift in Sources */,
 				C778940E29425A1C000FD862 /* Body.swift in Sources */,
+				C778941D2945D019000FD862 /* PlaneCollider.swift in Sources */,
+				C778941F2945D8B7000FD862 /* Collision.swift in Sources */,
+				C77894192945CF64000FD862 /* Collider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,8 @@ class Body {
     private(set) var velocity : CGVector = CGVector()
     private(set) var force : CGVector = CGVector()
     private(set) var mass : CGFloat = 0
-    private(set) var isFixed: Bool = false
+    private(set) var collider : Collider?
+    private(set) var transform : Transform?
     
     init(position: CGVector, mass: CGFloat) {
         self.position = position

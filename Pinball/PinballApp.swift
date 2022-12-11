@@ -11,7 +11,7 @@ import SwiftUI
 struct PinballApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GameView()
         }
     }
 }
