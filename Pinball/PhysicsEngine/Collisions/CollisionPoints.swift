@@ -7,18 +7,42 @@
 
 import Foundation
 
-struct CollisionPoints {
+class CollisionPoints {
     private(set) var AinB : CGVector
     private(set) var BinA : CGVector
     private(set) var normal : CGVector
     private(set) var depth : CGFloat
-    private(set) var hasCollision : Bool
+    private(set) var haveCollided : Bool
+    
+    init() {
+        self.AinB = CGVector()
+        self.BinA = CGVector()
+        self.normal = CGVector()
+        self.depth = 0.0
+        self.haveCollided = false
+    }
+    
+    init(AinB: CGVector, BinA: CGVector, normal: CGVector, depth: CGFloat, haveCollided: Bool) {
+        self.AinB = AinB
+        self.BinA = BinA
+        self.normal = normal
+        self.depth = depth
+        self.haveCollided = haveCollided
+    }
+    
+    func reverse() -> CollisionPoints {
+        var temp : CGVector = AinB
+        AinB = BinA
+        BinA = temp
+        normal = -normal
+        return self
+    }
 }
 
 struct Transform {
-    private(set) var position : CGVector
-    private(set) var scale : CGVector
-    private(set) var rotation : CGFloat
+    private(set) var position : CGVector = CGVector()
+    private(set) var scale : CGVector = CGVector()
+    private(set) var rotation : CGFloat = 0.0
 }
 
 func findBallAndBallCollisionPoints(firstBall: BallCollider, firstTransform: Transform, secondBall: BallCollider, secondTransform: Transform) -> CollisionPoints {
@@ -29,13 +53,13 @@ func findBallAndBallCollisionPoints(firstBall: BallCollider, firstTransform: Tra
     var BtoA : CGVector = A - B
     
     if AtoB.length() - secondBall.radius > firstBall.radius {
-        return CollisionPoints(AinB: CGVector(), BinA: CGVector(), normal: CGVector(), depth: 0.0, hasCollision: false)
+        return CollisionPoints()
     }
     
     A += AtoB.normal() * firstBall.radius
     B += BtoA.normal() * secondBall.radius
     
-    return CollisionPoints(AinB: A, BinA: B, normal: BtoA.normal(), depth: AtoB.length(), hasCollision: true)
+    return CollisionPoints(AinB: A, BinA: B, normal: BtoA.normal(), depth: AtoB.length(), haveCollided: true)
 }
 
 func findBallAndPlaneCollisionPoints(ball: BallCollider, ballTransform: Transform, plane: PlaneCollider, planeTransform: Transform) -> CollisionPoints {
@@ -46,11 +70,12 @@ func findBallAndPlaneCollisionPoints(ball: BallCollider, ballTransform: Transfor
     var d : CGFloat = (A - P) * N
     
     if d > ball.radius {
-        return CollisionPoints(AinB: CGVector(), BinA: CGVector(), normal: CGVector(), depth: 0.0, hasCollision: false)
+        return CollisionPoints()
     }
     
     var B = A - N * d
     A = A - N * ball.radius
+    var AtoB : CGVector = B - A
     
-    return CollisionPoints(AinB: A, BinA: B, normal: N.normal(), depth: (B - A).length(), hasCollision: true)
+    return CollisionPoints(AinB: A, BinA: B, normal: N.normal(), depth: AtoB.length(), haveCollided: true)
 }

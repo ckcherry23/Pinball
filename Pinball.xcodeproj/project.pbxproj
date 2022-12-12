@@ -20,6 +20,7 @@
 		C778941B2945CF85000FD862 /* BallCollider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778941A2945CF85000FD862 /* BallCollider.swift */; };
 		C778941D2945D019000FD862 /* PlaneCollider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778941C2945D019000FD862 /* PlaneCollider.swift */; };
 		C778941F2945D8B7000FD862 /* Collision.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778941E2945D8B7000FD862 /* Collision.swift */; };
+		C778942629468205000FD862 /* CollisionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778942529468205000FD862 /* CollisionDetector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		C778941A2945CF85000FD862 /* BallCollider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallCollider.swift; sourceTree = "<group>"; };
 		C778941C2945D019000FD862 /* PlaneCollider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneCollider.swift; sourceTree = "<group>"; };
 		C778941E2945D8B7000FD862 /* Collision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collision.swift; sourceTree = "<group>"; };
+		C778942529468205000FD862 /* CollisionDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionDetector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +94,7 @@
 			children = (
 				C778940A29422877000FD862 /* World.swift */,
 				C778940D29425A1C000FD862 /* Body.swift */,
-				C778941E2945D8B7000FD862 /* Collision.swift */,
-				C77894162945CAE1000FD862 /* CollisionPoints.swift */,
-				C77894182945CF64000FD862 /* Collider.swift */,
-				C778941A2945CF85000FD862 /* BallCollider.swift */,
-				C778941C2945D019000FD862 /* PlaneCollider.swift */,
+				C7789422294673AD000FD862 /* Collisions */,
 				C77894112944B63C000FD862 /* Utils */,
 			);
 			path = PhysicsEngine;
@@ -124,6 +122,19 @@
 				C77893FE29414C89000FD862 /* GameView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C7789422294673AD000FD862 /* Collisions */ = {
+			isa = PBXGroup;
+			children = (
+				C778941E2945D8B7000FD862 /* Collision.swift */,
+				C77894162945CAE1000FD862 /* CollisionPoints.swift */,
+				C77894182945CF64000FD862 /* Collider.swift */,
+				C778941A2945CF85000FD862 /* BallCollider.swift */,
+				C778941C2945D019000FD862 /* PlaneCollider.swift */,
+				C778942529468205000FD862 /* CollisionDetector.swift */,
+			);
+			path = Collisions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C778942629468205000FD862 /* CollisionDetector.swift in Sources */,
 				C778941B2945CF85000FD862 /* BallCollider.swift in Sources */,
 				C77893FF29414C89000FD862 /* GameView.swift in Sources */,
 				C77894132945BD06000FD862 /* Game.swift in Sources */,

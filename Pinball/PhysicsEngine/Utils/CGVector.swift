@@ -9,6 +9,10 @@ import Foundation
 
 // Operator Overriding
 extension CGVector {
+    static prefix func -(vector: CGVector) -> CGVector {
+        return CGVector(dx: -vector.dx, dy: -vector.dy)
+    }
+    
     static func *(vector: CGVector, scalar: CGFloat) -> CGVector {
         return CGVector(dx: vector.dx * scalar, dy: vector.dy * scalar)
     }
