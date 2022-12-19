@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7725AF82950CFA700E496FA /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7725AF72950CFA700E496FA /* Ball.swift */; };
+		C7725AFB2950CFE900E496FA /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7725AFA2950CFE900E496FA /* GameObject.swift */; };
 		C77893FD29414C89000FD862 /* PinballApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77893FC29414C89000FD862 /* PinballApp.swift */; };
 		C77893FF29414C89000FD862 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77893FE29414C89000FD862 /* GameView.swift */; };
 		C778940129414C8E000FD862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C778940029414C8E000FD862 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		C7725AF62947403100E496FA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C7725AF72950CFA700E496FA /* Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
+		C7725AFA2950CFE900E496FA /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		C77893F929414C89000FD862 /* Pinball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77893FC29414C89000FD862 /* PinballApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinballApp.swift; sourceTree = "<group>"; };
 		C77893FE29414C89000FD862 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7725AF92950CFAC00E496FA /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+				C7725AF72950CFA700E496FA /* Ball.swift */,
+				C7725AFA2950CFE900E496FA /* GameObject.swift */,
+			);
+			path = GameObjects;
+			sourceTree = "<group>";
+		};
 		C77893F029414C89000FD862 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				C77894122945BD06000FD862 /* Game.swift */,
+				C7725AF92950CFAC00E496FA /* GameObjects */,
 			);
 			path = GameEngine;
 			sourceTree = "<group>";
@@ -209,7 +223,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7725AF82950CFA700E496FA /* Ball.swift in Sources */,
 				C778942629468205000FD862 /* CollisionDetector.swift in Sources */,
+				C7725AFB2950CFE900E496FA /* GameObject.swift in Sources */,
 				C778941B2945CF85000FD862 /* BallCollider.swift in Sources */,
 				C77893FF29414C89000FD862 /* GameView.swift in Sources */,
 				C77894132945BD06000FD862 /* Game.swift in Sources */,

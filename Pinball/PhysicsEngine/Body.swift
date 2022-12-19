@@ -27,6 +27,16 @@ class Body {
         self.isMovable = isMovable
     }
     
+    init(position: CGVector, velocity: CGVector, force: CGVector, mass: CGFloat, collider: Collider? = nil, transform: Transform? = nil, isMovable: Bool) {
+        self.position = position
+        self.velocity = velocity
+        self.force = force
+        self.mass = mass
+        self.collider = collider
+        self.transform = transform
+        self.isMovable = isMovable
+    }
+    
     public func getInverseMass() -> CGFloat {
         return 1 / mass
     }

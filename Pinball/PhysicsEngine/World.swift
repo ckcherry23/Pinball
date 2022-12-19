@@ -21,14 +21,14 @@ class World {
     }
     
     public func updateWorld(dt: TimeInterval) {
-        resolveCollisions(dt: dt)
+        resolveCollisions()
         
         for body in bodies {
             body.updateBody(dt: dt)
         }
     }
     
-    public func resolveCollisions(dt: TimeInterval) {
+    public func resolveCollisions() {
         for firstBody in bodies {
             for secondBody in bodies {
                 guard firstBody !== secondBody else {
