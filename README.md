@@ -1,6 +1,6 @@
 # Pinball
 
-2D Pinball game created using a simple custom-made physics engine for iOS. Made with Swift for iOS.
+2D Pinball game created using a simple custom-made physics engine. Made with Swift for iOS.
 
 ## Physics Engine
 
